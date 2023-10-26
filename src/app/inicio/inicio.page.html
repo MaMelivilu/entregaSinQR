@@ -8,9 +8,13 @@
 </ion-header>
 
 <ion-content>
+ 
   <div>Bienvenido</div>
   <h5>{{nombre}}</h5>
   <h5>{{rut}}</h5>
   <br>
+  <ion-button (click)="scan()" color="warning" expand="block">
+    Escanear QR
+  </ion-button>
   
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-/* import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx'; */
+import { BarcodeScanner } from 'capacitor-barcode-scanner';
+
 
 
 @Component({
@@ -12,7 +13,8 @@ export class InicioPage implements OnInit {
 
   nombre!: string;
   rut!: string;
-  codigo: any;
+  resultadoScan: any;
+
 
   constructor(public navCtrl: NavController/* , private barcodeScanner: BarcodeScanner */) { }
 
@@ -30,13 +32,9 @@ export class InicioPage implements OnInit {
 
   }
 
-  /* scanear(){
-    this.barcodeScanner.scan().then(barcodeData => {
-      this.codigo = barcodeData.text;
-      console.log('Barcode data', this.codigo);
-    }).catch(err => {
-      console.log('Error', err);
-    });
-  } */
+  async scan(){
+    this.resultadoScan = (await  BarcodeScanner.scan()).code;
+    console.log("Resultado scan",JSON.parse(this.resultadoScan));
+  }
 
 }

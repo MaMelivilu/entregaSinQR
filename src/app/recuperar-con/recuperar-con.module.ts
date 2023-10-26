@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProfesorLoginPageRoutingModule } from './profesor-login-routing.module';
+import { RecuperarConPageRoutingModule } from './recuperar-con-routing.module';
 
-import { ProfesorLoginPage } from './profesor-login.page';
+import { RecuperarConPage } from './recuperar-con.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { ProfesorLoginPage } from './profesor-login.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    ProfesorLoginPageRoutingModule
+    RecuperarConPageRoutingModule
   ],
-  declarations: [ProfesorLoginPage]
+  declarations: [RecuperarConPage]
 })
-export class ProfesorLoginPageModule {}
+export class RecuperarConPageModule {}
